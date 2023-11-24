@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   
-  // Function to update the position of a div diagonally in 3D space
+  // Function to update the position of the fireflies
   function randomPos(element) {
     var randomX = Math.floor(Math.random() * window.innerWidth);
     var randomY = Math.floor(Math.random() * window.innerHeight);
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
   }
   
-  // Function to create a new div, apply positioning, and update its position at intervals
+  // Function to create a new div(fireflies), apply positioning, and update its position at intervals
   function createAndMoveDiv() {
     var ogBug = document.querySelector('#bug');
     var container = document.body;
@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set initial position
     randomPos(cloneBug);
     
-    // Update the position of each cloned div independently at intervals (e.g., every 4 seconds)
+    // Update the position of each cloned firefly independently at intervals
     setInterval(function () {
       randomPos(cloneBug);
 
-    }, Math.random() * 8000); // Update every 4000 milliseconds (4 seconds)
+    }, Math.random() * 8000); // Update every 8000 milliseconds (8 seconds)
   }
 
   var cloneCount = 8;
 
-  // Clone the div, apply 3D diagonal positioning, and append it to the container
+  // Clone the div, apply positioning, and append it to the container
   for (var i = 0; i < cloneCount; i++) {
     createAndMoveDiv();
   }
