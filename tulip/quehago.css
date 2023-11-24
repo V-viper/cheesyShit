@@ -1,0 +1,163 @@
+:root{
+    --back-petals: #f12d37;
+    --gradient: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgb(255, 62, 72) 44%);
+    --shape-sides: 100px 400px 200px 400px; 
+
+    --flower-green: linear-gradient(0deg, #123c3e 44%, rgba(35,145,59,1) 100%); /*rgba(17,91,33,1)*/
+
+    --sky: linear-gradient(0deg, rgb(142, 45, 253) 0%, #1b1538 44%);
+
+    --fireflies: #ffb700;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.sky{
+    position: relative;
+    background: var(--sky);
+    height: 720px;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.flower{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+}
+
+.petals{
+    position: relative;
+}
+
+.petal{
+    position: absolute;
+    top: 60px;
+    left: -45px;
+    width: 110px;
+    height: 130px;
+    border-radius: var(--shape-sides);
+    border: 1px solid rgb(173, 53, 83);
+    background: var(--gradient);
+}
+
+.petal:nth-child(1){ /* Petal to the right */
+    rotate: 70deg;
+    z-index: 3;
+    border-radius: var(--shape-sides);
+}
+
+.petal:nth-child(2){ /* back */
+    rotate: 40deg;
+    background: var(--back-petals);
+}
+.petal:nth-child(3){ /* front*/
+    rotate: 10deg; 
+    z-index: 3;
+}
+
+/* --------------------------- */
+.stem{
+    position: absolute;
+    width: 6px;
+    height: 450px;
+    top: 120px;
+    background: var(--flower-green);
+}
+
+.leaf{
+    position: absolute;
+    background: var(--flower-green);
+    width: 80px;
+    height: 330px;
+    border-radius: 0% 100% 27% 73% / 0% 100% 0% 100% ;
+    border: 1px solid #0b2b2d;
+}
+.leaf:nth-child(1){
+    left: 20px;
+    top: 150px;
+    rotate: 30deg;
+}
+.leaf:nth-child(2){
+    transform: scaleX(-1);
+    right: 20px;
+    top: 160px;
+    rotate: -30deg;
+}
+/* --------------------------- */
+.grass{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    height: 25%;
+    background: rgb(97, 29, 29);
+    transform: scaleX(10);
+}
+
+/* --------------------------- */
+#bug{
+    z-index: 2;
+    position: relative;
+    bottom: 900px;
+    width: 5px;
+    height: 5px;
+    background-color: var(--fireflies);
+    border-radius: 50%;
+    filter: blur(1px);
+
+    box-shadow: 0px 0px 20px white, 0px 0px 10px var(--fireflies);
+    animation: bounce 20s linear infinite;
+    transition: transform 7s ease-in-out;
+}
+
+@keyframes bounce {
+    0%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }    
+    100% {
+        opacity: 0;
+    }
+} 
+
+/* --------------------------- */
+.bottom{
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(77, 24, 24);;
+}
+
+div[class|="txt"]{
+    width: 30%;
+    padding: 30px;
+    color: #7563cf;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.bottom .txt-container{
+    bottom: 0;
+}
