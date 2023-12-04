@@ -1,0 +1,14 @@
+/* ---------- NOT responsive -------------- */
+
+@media (min-width: 1050px) {
+
+    .txt-container2{
+        position: absolute;
+        right: 20%;
+    }
+    .txt-container{
+        margin-left: 20%;
+        
+    }
+  }
+  

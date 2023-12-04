@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="quehago.css">
+    <link rel="stylesheet" type="text/css" href="css/quehago.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
     <script src="conmivida.js"></script>
 </head>
 
@@ -11,7 +12,8 @@
         <div class="petals">
             <div class="petal"></div>
             <div class="petal"></div>
-            <div class="petal"></div>
+            <div class="petal" onclick="txtPopUp()" onmouseenter="tooltipHi()" onmouseout="tooltipBye()"></div>
+            <span id="tooltip" onclick="txtPopUp()" onmouseenter="tooltipHi()" onmouseout="tooltipBye()">Click me ♡</span>
         </div>
         <div class="petals">
             <div class="stem">
@@ -46,10 +48,6 @@
 
     <div id="bug" class="bug"></div>
     <div class="bottom">
-        <div class="txt-container">
-            <h1>dfgvegvrd</h1>
-            <p> </p>
-        </div>
     </div>
 
 </body>

@@ -1,2 +1,3 @@
 # cheesyShit
-A repository for all of the cheesy shit I've done
+A repository for all of the cheesy shit I've made. 
+Nothing fancy to see here.
