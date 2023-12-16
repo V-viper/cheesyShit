@@ -139,18 +139,19 @@ html, body{
     z-index: 2;
     position: relative;
     bottom: 900px;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: var(--fireflies);
     border-radius: 50%;
     filter: blur(1px);
 
     box-shadow: 0px 0px 20px white, 0px 0px 10px var(--fireflies);
-    animation: bounce 20s linear infinite;
-    transition: transform 7s ease-in-out;
+    /*animation: bounce 20s linear infinite;*/
+    animation: 200s alternate infinite;
+    transition: transform 9s; 
 }
 
-@keyframes bounce {
+/*@keyframes bounce {
     0%{
         opacity: 0;
     }
@@ -166,7 +167,7 @@ html, body{
     100% {
         opacity: 0;
     }
-} 
+} */
 
 /* --------------------------- */
 .bottom{
