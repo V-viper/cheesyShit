@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function txtPopUp() {
-  var txt = document.getElementsByClassName('txt-container');
-  var txt2 = document.getElementsByClassName('txt-container2');
+  let txt = document.getElementsByClassName('txt-container');
+  let txt2 = document.getElementsByClassName('txt-container2');
 
   if (txt[0].style.opacity === "0") {
     txt[0].style.opacity = '1';

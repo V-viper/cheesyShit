@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+#equation {
+    margin-bottom: 25px;
+    color: rgb(218, 64, 64);
+    font-weight: bold;
+}
+
+/* ----------------------------------- First Section --------------------------------- */
+.letter1 {}
+
+/* ----------------------------------- Second Section --------------------------------- */
+/* .letter2{
+    display: none;
+} */
+
+.page {
+    margin: 0 auto;
+    width: 50vw;
+    min-height: 100vh;
+    min-width: 350px;
+    position: relative;
+    box-sizing: content-box;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 24px;
+
+    background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
+    background-size: 100% 1.2rem;
+
+    padding: 1.7rem 0.5rem 0.3rem 3.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    background-attachment: scroll;
+}
+
+.page p,
+h1 {
+    margin: 0 auto;
+    width: 70%;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.marge {
+    position: absolute;
+    border-left: 1px solid #d88;
+    height: 100%;
+    left: 6.3rem;
+    top: 0;
+}
+
+.page p {
+    text-indent: .5rem;
+    padding-bottom: 2.2rem;
+}
+
+#equation {
+    text-align: center;
+}
+
+.page img {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+}
+
+.background {
+    background: url("https://i.pinimg.com/originals/56/88/34/56883432aefe34311666f7eec54f1d78.jpg") left bottom no-repeat,
+        url("https://i.pinimg.com/736x/ac/c7/dd/acc7ddf4c9a16f0d229bc5c37c52c573.jpg") right bottom no-repeat;
+    background-attachment: fixed;
+}
+
