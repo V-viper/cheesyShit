@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   let randomX, randomY, randomZ;
   let ogBug, container;
   let cloneCount = 8;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   // Create new Fireflies, apply initial positioning, change position in intervals
   function createAndMoveDiv() {
-    ogBug = document.querySelector('#bug');
+    ogBug = document.querySelector("#bug");
     container = document.body;
 
     let cloneBug = ogBug.cloneNode(true);
@@ -52,16 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function txtPopUp() {
-  let txt = document.getElementsByClassName('txt-container');
-  let txt2 = document.getElementsByClassName('txt-container2');
+  let txt = document.getElementsByClassName("txt-container");
+  let txt2 = document.getElementsByClassName("txt-container2");
 
   if (txt[0].style.opacity === "0") {
-    txt[0].style.opacity = '1';
-    txt2[0].style.opacity = '1';
+    txt[0].style.opacity = "1";
+    txt2[0].style.opacity = "1";
 
   } else {
-    txt[0].style.opacity = '0';
-    txt2[0].style.opacity = '0';
+    txt[0].style.opacity = "0";
+    txt2[0].style.opacity = "0";
   }
 
 }
