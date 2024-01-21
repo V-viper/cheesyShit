@@ -14,6 +14,4 @@ function noti() {
 
     notification.style.opacity = 0;
 }
-
-
   
