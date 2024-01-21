@@ -3,22 +3,107 @@
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1,
 #equation {
-    margin-bottom: 25px;
     color: rgb(218, 64, 64);
     font-weight: bold;
 }
 
-/* ----------------------------------- First Section --------------------------------- */
-.letter1 {}
+#equation{
+    padding: 0;
+}
 
-/* ----------------------------------- Second Section --------------------------------- */
-/* .letter2{
+.letter,
+.close {
+    cursor: pointer;
+}    
+
+/* ----------------------------------- Closed letter --------------------------------- */
+#closedSect {
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+.iconArea{
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    top: 200px;
+}
+
+#notification{
+    width: 40px;
+    height: 40px;
+    background-color: #fc9dac;
+    border-radius: 30px;
+    position: inherit;
+    top: 100px;
+    left: 170px;
+    z-index: 1;
+}
+
+#notification p{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 7px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.letter{
+    width: 200px;
+    position: absolute;
+}
+
+#open-icon{
+    opacity: 0;
+}
+
+#open-icon:hover{
+    opacity: 1;
+}
+
+.milkStrip {
+    display: flex;
+    gap: 200px;
+    position: fixed;
+    bottom: 0;
+    animation: stripSlide 10s linear infinite;
+}
+
+.milkStrip img {
+    max-height: 200px;
+}
+
+@keyframes stripSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ----------------------------------- Letter --------------------------------- */
+#letter-open {
     display: none;
-} */
+}
+
+.close {
+    width: 100px;
+    height: 60px;
+    background-color: #aa5858;
+    border-radius: 0 30px 30px 0;
+    right: -100px;
+    position: absolute;
+}
+
+.close .fa{
+    margin: 15px 0 0 60px;
+}
 
 .page {
     margin: 0 auto;
@@ -33,7 +118,7 @@ h1,
     background-image: linear-gradient(#f5f5f0 1.1rem, #ccc 1.2rem);
     background-size: 100% 1.2rem;
 
-    padding: 1.7rem 0.5rem 0.3rem 3.5rem;
+    padding: 1.7rem 0.5rem 0.3rem 6.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     background-attachment: scroll;
@@ -42,14 +127,15 @@ h1,
 .page p,
 h1 {
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
 }
 
 h1 {
     margin-bottom: 20px;
 }
 
-.marge {
+
+.margen {
     position: absolute;
     border-left: 1px solid #d88;
     height: 100%;
@@ -66,11 +152,38 @@ h1 {
     text-align: center;
 }
 
-.page img {
-    width: 100%;
+.imageArea {
+    position: relative;
     max-width: 500px;
     margin: auto;
     display: block;
+}
+
+.imgClip{
+    padding: 60px 0;
+    overflow: clip;
+}
+
+.page img[alt="drawing"] {
+    width: 100%;
+    max-width: 500px;
+}
+
+.tape {
+    width: 200px;
+    position: absolute;
+}
+
+.top-left {
+    top: 0;
+    left: -50px;
+    rotate: 140deg;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: -50px;
+    transform: rotate(140deg);
 }
 
 .background {
@@ -78,4 +191,3 @@ h1 {
         url("https://i.pinimg.com/736x/ac/c7/dd/acc7ddf4c9a16f0d229bc5c37c52c573.jpg") right bottom no-repeat;
     background-attachment: fixed;
 }
-
