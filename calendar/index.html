@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date?</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<header>
+    <h1 id="date">It seems like you can't get a date. . .</h1>
+    <p>May I help you with that? ♡</p>
+</header>
+
+<body>
+    <div class="center">
+        <div id="calendar" data-toggle="modal" data-target="#yes"></div> <!-- FIX MODAL POP UP-->
+        <img id="background" src="doily.png">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="yes" tabindex="-1" role="dialog" aria-labelledby="yesLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>What's your idea of a perfect date? Is it <code>DD/MM/YY</code>? <br>Mine would be one with you ♡
+                    </p>
+                    <form action="" method="post">
+                        <fieldset>
+                            <div class="container">
+                            <label for="dateTxt">Date: <input type="date" name="" id="dateTxt"></label>
+                            <label for="timeTxt">Time: <input type="time" name="" id="timeTxt"></label>
+                            <label for="dropdown">Pick one:
+                                <select name="" id="dropdown">
+                                    <option value="Valo">Valorant</option>
+                                    <option value="Terraria">Terraria</option>
+                                    <option value="PZ">Proyect Zomboid</option>
+                                    <option value="League">League</option>
+                                    <option value="Other">Other?</option>
+                                </select>
+                            </label>
+                        </div>
+
+                            <div id="hidden" style="flex: none !important;">
+                            <hr>
+                                <p id="Other">Hmm. . . Any other ideas?</p>
+                                <textarea rows="4" cols="50" name="" id="extraInfo"></textarea>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Confirm 💘</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

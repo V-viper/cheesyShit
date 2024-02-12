@@ -55,14 +55,11 @@ function txtPopUp() {
   let txt = document.getElementsByClassName("txt-container");
   let txt2 = document.getElementsByClassName("txt-container2");
 
-  if (txt[0].style.opacity === "0") {
-    txt[0].style.opacity = "1";
-    txt2[0].style.opacity = "1";
+  let visibility = window.getComputedStyle(txt[0]).opacity;
+  let visibility2 = window.getComputedStyle(txt2[0]).opacity;
 
-  } else {
-    txt[0].style.opacity = "0";
-    txt2[0].style.opacity = "0";
-  }
+  visibility === "0" ? txt[0].style.opacity = "1" : txt[0].style.opacity = "0";
+  visibility2 === "0" ? txt2[0].style.opacity = "1" : txt2[0].style.opacity = "0";
 
 }
 

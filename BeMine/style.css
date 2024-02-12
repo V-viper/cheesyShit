@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Carattere');
 
-
+body{
+    background-color: #fff5fc !important;
+}
 h1{
     color: rgb(218, 64, 64) !important;
     font-family: 'Carattere', cursive !important;

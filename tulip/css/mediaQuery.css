@@ -1,6 +1,6 @@
 /* ---------- NOT responsive -------------- */
 
-@media (min-width: 1050px) {
+@media (min-width: 1700px) {
 
     .txt-container2{
         position: absolute;
@@ -11,4 +11,5 @@
         
     }
   }
+  
   

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(255, 196, 196) !important;
+}
+#date{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 24px;
+    color: rgb(218, 64, 64);
+    font-weight: bold;
+}
+#date, p{
+    text-align: center;
+}
+#calendar button{
+    background-color: rgb(218, 64, 64) !important;
+    border-color: brown !important;
+}
+.fc .fc-toolbar.fc-header-toolbar{
+    margin-bottom: 0.5em;
+}
+.center{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#calendar{
+    cursor: pointer;
+    width: 490px;
+    height: 490px;
+    position: absolute;
+    margin: 55px 50px;
+    z-index: 1;
+    right: 0px;
+    left: 0px;
+}
+
+#background{
+    position: absolute;
+    width: 100%;
+    padding: 0;
+}
+/* Modal area */
+.modal-body, .modal-header, .modal-footer{
+    background-image: url("https://png2.cleanpng.com/sh/8854db2ccd230c3bee2758bcb02dc771/L0KzQYi4UsA3N5Y5TpGAYUK7cre4gck1Omg5T5CDOEC7R4G4WME2OWM7SasDMEK5QIeBTwBvbz==/5a28bf1a942747.8808701815126198026068.png");
+    background-color: #fff1e0;
+    color: #456586;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+}
+label{
+  margin: 20px;
+}
+
+.modal-footer button{
+    background-color: #e77e78;
+    color: white;
+}
+#hidden{
+    display: none;
+}
+#hidden p{
+    margin: 0px;
+}
+input, select{
+    height: 1.5em;
+    width: 10em;
+  }
+  

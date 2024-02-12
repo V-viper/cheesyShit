@@ -1,33 +1,36 @@
-:root{
+:root {
     --back-petals: #eb343d;
-    --gradient: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgb(255, 76, 76) 44%);
-    --shape-sides: 100px 400px 200px 400px; 
+    --gradient: linear-gradient(0deg, rgba(253, 187, 45, 1) 0%, rgb(255, 76, 76) 44%);
+    --shape-sides: 100px 400px 200px 400px;
 
-    --flower-green: linear-gradient(0deg, #123c3e 44%, rgba(35,145,59,1) 100%); /*rgba(17,91,33,1)*/
+    --flower-green: linear-gradient(0deg, #123c3e 44%, rgba(35, 145, 59, 1) 100%);
+    /*rgba(17,91,33,1)*/
 
-    /*--sky: linear-gradient(0deg, rgb(142, 45, 253) 0%, #1b1538 44%);*/
-    --sky: linear-gradient(0deg, rgba(240,159,156,1) 0%, rgba(100,43,107,1) 25%, rgb(27, 9, 37) 74%);
+    --sky: linear-gradient(0deg, #a87bbd 0%, #512f83 25%, #171135 74%);
     --fireflies: #ffb700;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
 
-html, body{
+html,
+body {
     position: relative;
     overflow: hidden;
 }
 
 /* --------------------------- */
-.sky{
+.sky {
     position: relative;
     background: var(--sky);
     height: 720px;
     background-repeat: no-repeat;
     z-index: 2;
 }
-.flower{
+
+.flower {
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,11 +39,11 @@ html, body{
     z-index: 4;
 }
 
-.petals{
+.petals {
     position: relative;
 }
 
-.petal{
+.petal {
     position: absolute;
     top: 60px;
     left: -45px;
@@ -51,26 +54,32 @@ html, body{
     background: var(--gradient);
 }
 
-.petal:nth-child(1){ /* Petal to the right */
+.petal:nth-child(1) {
+    /* Petal to the right */
     rotate: 70deg;
     z-index: 3;
     border-radius: var(--shape-sides);
 }
 
-.petal:nth-child(2){ /* back */
+.petal:nth-child(2) {
+    /* back */
     rotate: 40deg;
     background: var(--back-petals);
 }
-.petal:nth-child(3){ /* front*/
-    rotate: 10deg; 
+
+.petal:nth-child(3) {
+    /* front*/
+    rotate: 10deg;
     z-index: 3;
 }
 
-.petal:nth-child(3):hover, #tooltip:hover{
+.petal:nth-child(3):hover,
+#tooltip:hover {
     cursor: pointer;
 }
+
 /* --------------------------- */
-#tooltip{
+#tooltip {
     visibility: hidden;
     position: absolute;
     top: 100px;
@@ -84,7 +93,7 @@ html, body{
     z-index: 3;
 }
 
-#tooltip::after{
+#tooltip::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -96,7 +105,7 @@ html, body{
 }
 
 /* --------------------------- */
-.stem{
+.stem {
     position: absolute;
     width: 6px;
     height: 450px;
@@ -104,27 +113,30 @@ html, body{
     background: var(--flower-green);
 }
 
-.leaf{
+.leaf {
     position: absolute;
     background: var(--flower-green);
     width: 80px;
     height: 330px;
-    border-radius: 0% 100% 27% 73% / 0% 100% 0% 100% ;
+    border-radius: 0% 100% 27% 73% / 0% 100% 0% 100%;
     border: 1px solid #0b2b2d;
 }
-.leaf:nth-child(1){
+
+.leaf:nth-child(1) {
     left: 20px;
     top: 150px;
     rotate: 30deg;
 }
-.leaf:nth-child(2){
+
+.leaf:nth-child(2) {
     transform: scaleX(-1);
     right: 20px;
     top: 160px;
     rotate: -30deg;
 }
+
 /* --------------------------- */
-.grass{
+.grass {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -135,7 +147,7 @@ html, body{
 }
 
 /* --------------------------- */
-#bug{
+#bug {
     z-index: 2;
     position: relative;
     bottom: 900px;
@@ -148,7 +160,7 @@ html, body{
     box-shadow: 0px 0px 20px white, 0px 0px 10px var(--fireflies);
     /*animation: bounce 20s linear infinite;*/
     animation: 200s alternate infinite;
-    transition: transform 9s; 
+    transition: transform 9s;
 }
 
 /*@keyframes bounce {
@@ -170,26 +182,30 @@ html, body{
 } */
 
 /* --------------------------- */
-.bottom{
+.bottom {
     position: fixed;
     bottom: 0;
     z-index: 1;
     height: 100%;
     width: 100%;
-    background-color: rgb(77, 24, 24);;
+    background-color: rgb(77, 24, 24);
 }
 
-div[class|="txt"]{
+div[class|="txt"] {
     width: 280px;
     padding: 30px;
-    color: rgb(189, 105, 201);
+    color: #a87bbd;
     opacity: 0;
+    position: absolute;
+    z-index: 8;
+
 }
 
-h2{
+h2 {
     margin-bottom: 20px;
 }
 
-.txt-container2{
-    float: right;
+.txt-container2 {
+    top: 15vh;
+    right: 0;
 }
